@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block extrainfo %}
+ 
+    <!-- Security token -->
+
+    
+    <!-- Using the formset -->
+    {% for object in object_list %}
+        <div>
+            {{object.id}},
+            {{ object.detail1}},
+            {{object.detail2 }},
+            {{object.detail3}}',
+            {{object.material}},
+            {{object.gauge}},
+            {{object.quantity}},	
+            {{object.rate}},	
+            {{object.size}},	
+            {{object.colour}},
+            {{object.podetail}},
+            {{object.process}},
+            {{object.billdetail}},
+            {{object.stock}}
+         </div>
+         <div> 
+             {{"<br>"}}
+         </div>
+    {% endfor %}
+    
+    {{object.detail1}}  
+
+{% endblock extrainfo %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block extrainfo %}
+
+<form method="POST" enctype="multipart/form-data"> 
+        <!-- Security token -->
+
+    {% csrf_token %} 
+    <!-- Using the formset -->
+    
+    {{form|crispy}} 
+
+
+    <input type="submit" value="Submit"> 
+
+</form>
+{% endblock extrainfo %}
